@@ -1,5 +1,5 @@
 .org	0x00
-cli
+
 sbi		0x04, 5			; set DDR-PORTB pin5.
 sbi		0x05, 5			; set PORTB pin5.
 
@@ -11,6 +11,8 @@ ldi		r17, 0xFF
 ldi		r16, 0xFF
 ; Average clever. Uses the DEC's change of Zero flag and 0xFF auto-loop-back.
 loop:
+nop
+nop
 dec		r17
 brne 	loop	; loop
 dec		r16

@@ -1,6 +1,6 @@
 .org	0x00
-cli
-ldi		r20, 0x10
+
+ldi		r20, 0x20
 ldi		r21, 0x00
 out		0x04, r20		; set DDR-PORTB pin5.
 out		0x05, r20		; set PORTB pin5.
@@ -16,9 +16,9 @@ loop:
 nop
 nop
 dec		r17
-brne 	loop	; loop
+brne 	loop
 dec		r16
-brne 	loop	; loop
+brne 	loop
 
 out		0x05, r21		; clear PORTB pin5.
 eor		r18, r19
