@@ -1,6 +1,6 @@
 .org	0x00
 
-ldi		r20, 0x20		; bit 5 HI
+ldi		r20, 0x20			; bit 5 HI
 ldi		r21, 0x00
 sts		0x24, r20			; set DDR-PORTB pin5.
 sts		0x25, r20			; set VAL-PORTB pin5.
